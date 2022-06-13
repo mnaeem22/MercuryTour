@@ -34,7 +34,11 @@ namespace MercuryTour.Tests
 			//login_test.LoginTest("userName", "password");
 
 			//New Implementation
-			login_test.LoginTest(CSettings.UserName,CSettings.Password);
+			//login_test.LoginTest(CSettings.UserName,CSettings.Password);
+
+			//REvert to old Implementation
+			login_test.LoginTest("nunitlogin", "testlogin");
+
 
 			MercuryLoginSuccessPage loginSuccessMessage = new MercuryLoginSuccessPage(mydriver);
 			string actualLoginSuccessMessage= loginSuccessMessage.LoginSuccessMessage();
